@@ -1,0 +1,93 @@
+:root {
+  --accent-color: #ff4c4c;   /* red highlight */
+  --text-color: #eaeaea;     /* primary text */
+  --subtle-text: #a0a0a0;    /* secondary text */
+  --card-bg: rgba(0, 0, 0, 0.7);  /* semi-transparent black */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-image: url('Backgroung.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* dark overlay to improve readability */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(255, 76, 76, 0.2);
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+.title {
+  color: var(--subtle-text);
+  margin-bottom: 1.5rem;
+}
+
+.social-links a {
+  margin: 0 10px;
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #fff;
+}
+
+.skills {
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.skills h2 {
+  margin-bottom: 1rem;
+  color: var(--accent-color);
+}
+
+.skills ul {
+  list-style: square;
+  padding-left: 20px;
+}
+
+.skills li {
+  margin-bottom: 0.5rem;
+}
